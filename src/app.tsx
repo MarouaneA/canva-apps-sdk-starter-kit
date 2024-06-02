@@ -7,7 +7,7 @@ export const App = () => {
   const onClick = () => {
     addNativeElement({
       type: "TEXT",
-      children: ["Hello world!"],
+      children: ["UN PLAN"],
     });
   };
 
@@ -19,7 +19,7 @@ export const App = () => {
           then close and reopen the app in the editor to preview the changes.
         </Text>
         <Button variant="primary" onClick={onClick} stretch>
-          Do something cool
+          Do something cooler
         </Button>
       </Rows>
     </div>
