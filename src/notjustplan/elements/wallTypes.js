@@ -1,0 +1,22 @@
+export const wallTypes = [
+    { label: "Load-Bearing Wall", value: "load_bearing", description: "A wall that supports the weight of the structure above it, including floors and roof." },
+    { label: "Non-Load-Bearing Wall", value: "non_load_bearing", description: "A wall that does not support any weight other than its own, primarily used for partitioning spaces." },
+    { label: "Partition Wall", value: "partition", description: "A non-load-bearing wall used to divide spaces within a building." },
+    { label: "Curtain Wall", value: "curtain", description: "A non-load-bearing exterior wall, often made of glass, that is attached to the building's structure." },
+    { label: "Shear Wall", value: "shear", description: "A wall designed to resist lateral forces, such as wind or seismic activity, to prevent the structure from deforming." },
+    { label: "Cavity Wall", value: "cavity", description: "A wall consisting of two layers with a gap (cavity) in between, providing better insulation." },
+    { label: "Panel Wall", value: "panel", description: "A non-load-bearing wall made from pre-fabricated panels, often used in commercial construction." },
+    { label: "Knee Wall", value: "knee", description: "A short wall, typically found under the eaves of a roof or to support a countertop." },
+    { label: "Party Wall", value: "party", description: "A wall shared by two adjacent properties, typically found in townhouses or semi-detached houses." },
+    { label: "Parapet Wall", value: "parapet", description: "A low wall that extends above the roofline, balcony, or terrace, providing safety and aesthetics." },
+    { label: "Fire Wall", value: "fire", description: "A wall designed to prevent the spread of fire between or through buildings." },
+    { label: "Retaining Wall", value: "retaining", description: "A wall designed to hold back soil or rock from a building or structure." },
+    { label: "Green Wall", value: "green", description: "A wall partially or completely covered with vegetation, providing environmental benefits and aesthetic appeal." },
+    { label: "Drywall", value: "drywall", description: "A type of interior wall made from gypsum board, used for its ease of installation and finishing." },
+    { label: "Brick Wall", value: "brick", description: "A wall constructed from bricks, known for its durability and aesthetic appeal." },
+    { label: "Concrete Wall", value: "concrete", description: "A wall made from concrete, offering strength and fire resistance." },
+    { label: "Stone Wall", value: "stone", description: "A wall made from natural stones, used for its strength and natural beauty." },
+    { label: "Glass Wall", value: "glass", description: "A wall made primarily of glass panels, often used to create modern, transparent spaces." },
+    { label: "Plaster Wall", value: "plaster", description: "A wall finished with plaster, providing a smooth surface for painting or wallpapering." },
+    { label: "Insulated Wall", value: "insulated", description: "A wall that includes insulation materials to improve energy efficiency and thermal comfort." }
+];
