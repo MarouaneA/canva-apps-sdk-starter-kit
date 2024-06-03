@@ -1,11 +1,11 @@
-import { DoorController } from "../controllers/doorController";
-import { WindowController } from "../controllers/windowController";
-import { WallController } from "../controllers/wallController";
-import { DiverseController } from "../controllers/diverseController";
+import { diverseTypes } from './diverseTypes';
+import { doorTypes } from './doorTypes';
+import { wallTypes } from './wallTypes';
+import { windowTypes } from './windowTypes';
 
 export const elementTypes = [
-    { label: "Wall", value: WallController },
-    { label: "Door", value: DoorController},
-    { label: "Window", value: WindowController },
-    { label: "Other", value: DiverseController },
+    { label: "Wall", value: wallTypes },
+    { label: "Door", value: doorTypes},
+    { label: "Window", value: windowTypes},
+    { label: "Other", value: diverseTypes },
 ];
