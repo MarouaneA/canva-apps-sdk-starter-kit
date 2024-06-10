@@ -4,17 +4,16 @@ import { planTypes } from "../elements/planTypes"
 import * as React from "react";
 
 
-export const ProjectController = () => {
+export const ProjectController = ({onDataChange}) => {
+    interface ProjectControllerProps {
+      onDataChange: (type:string ,data:any) => void;
+    }
 
 
-  const onClick = () => {
-    addNativeElement({
-      type: "TEXT",
-      children: ["UN PLAN"],
-    });
+    const createChangeHandler = (type, handler) => (value) => {
+      handler(type, value) ;
   };
-
-
+ 
 
   return (
     <Rows spacing="1u">
@@ -36,6 +35,7 @@ export const ProjectController = () => {
             value: 'feet'
           }
         ]}
+        onChange={createChangeHandler("unit",onDataChange)}
       />
       <Title
         alignment="start"
@@ -44,7 +44,7 @@ export const ProjectController = () => {
         Project type
       </Title>
       
-      <Select options={planTypes} stretch /> 
+      <Select options={planTypes} onChange={createChangeHandler("type",onDataChange)} stretch /> 
 
       <Columns
         align="start"
@@ -61,6 +61,7 @@ export const ProjectController = () => {
           <NumberInput
             defaultValue={1}
             min={0}
+            onChange={createChangeHandler("length",onDataChange)}
           />
         </Column>
         <Column width="1/2">
@@ -73,13 +74,12 @@ export const ProjectController = () => {
           <NumberInput
             defaultValue={1}
             min={0}
+            onChange={createChangeHandler("width",onDataChange)}
           />
         </Column>
       </Columns>
 
-      <Button variant="primary" onClick={onClick} stretch>
-        Initialize blueprint
-      </Button>
+  
 
     </Rows>
 

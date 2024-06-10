@@ -5,19 +5,23 @@ import * as React from "react";
 
 interface ElementControllerProps {
   chosenType: any;
-  onDataChange: (data:any) => void;
+  onDataChange: (type:string ,data:any) => void;
 }
 
-//     <Select options={chosenType} stretch/> 
-export const ElementController = ({ chosenType, onDataChange }) => {
-  
-  const handleDataChange = () => {
-    const data ={
-    type :"test"
-  };
-  onDataChange(data);
-};
 
+export const ElementController = ({ chosenType, onDataChange }) => {
+
+  const createChangeHandler = (type, handler) => (value) => {
+    handler(type, value) ;
+};
+  
+
+  const getElementTypes = (value) => {
+    const found = elementTypes.find(item => item.value === value);
+    return found ? found.element : null;
+  }
+ 
+  
   return (
     <Rows spacing="1u">
     <Title
@@ -26,7 +30,7 @@ export const ElementController = ({ chosenType, onDataChange }) => {
         size="xsmall">
         Type
       </Title>
-      <Select options={chosenType} onChange={handleDataChange} stretch/>
+      <Select options={getElementTypes(chosenType)} onChange={createChangeHandler("type",onDataChange)} stretch/>
 
 
     <Columns
@@ -42,9 +46,9 @@ export const ElementController = ({ chosenType, onDataChange }) => {
               size="xsmall">
               Length
             </Title>
-            <NumberInput
+            <NumberInput 
               defaultValue={1}
-              min={0}
+              min={0} onChange={createChangeHandler("length",onDataChange)}
             />
           </Column>
           <Column width="1/2">
@@ -57,6 +61,7 @@ export const ElementController = ({ chosenType, onDataChange }) => {
             <NumberInput
               defaultValue={1}
               min={0}
+              onChange={createChangeHandler("width",onDataChange)}
             />
           </Column>
     </Columns>

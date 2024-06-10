@@ -1,0 +1,14 @@
+   <svg width="300" height="300" xmlns="http://www.w3.org/2000/svg">
+      {/* Door hinge line */}
+      <line x1="100" y1="50" x2="100" y2="150" stroke="black" stroke-width="2"/>
+
+      {/* Swing arc (dashed) */}
+      <path d="M 100 50 A 100 100 0 0 1 200 150" fill="none" stroke="black" stroke-width="1" stroke-dasharray="5,5"/>
+
+      {/* Dimension lines */}
+      <line x1="200" y1="150" x2="210" y2="150" stroke="black" stroke-width="1" />
+      <line x1="100" y1="150" x2="210" y2="150" stroke="black" stroke-width="1" stroke-dasharray="2,2"/>
+      
+      {/* Dimension text */}
+      <text x="150" y="170" fill="black" font-size="12">100 cm</text>
+</svg>
